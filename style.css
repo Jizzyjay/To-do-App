@@ -1,0 +1,40 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-family: 'Hina Mincho', serif;
+}
+
+.container {
+    padding: 10px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 380px;
+    height: 200px;
+    background-image: url(images/black.jpg);
+    background-size: 100% 200%;
+}
+
+.clear i:hover {
+    cursor: pointer;
+    text-shadow: 1px 3px 5px #000;
+    transform: rotate(45deg);
+}
+
+#date {
+   position: absolute;
+   bottom: 10px;
+   left: 10px;
+   color: #fff;
+   font-size: 25px;
+}
+
+.content {
+    width: 380px;
+    height: 350px;
+    background-color: #fff;
+    
+}
