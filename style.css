@@ -1,62 +1,63 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Hina Mincho', serif;
 }
 
 body {
     height: 100%;
-    background-color: #111;
+    background-color: #151714;
+    box-sizing: border-box;
 }
 
 h1 {
-    font-size: 3rem;
-    font-size: 100;
-    margin: 1rem 0 3rem;
-    text-align: center;
     color: #fff;
+    font-size: 3rem;
+    font-weight: 50;
+    text-align: center;
+    margin: 1rem 0 3rem;
 }
 
 .todo {
+    color: #a903fc;
+    text-transform: uppercase;
     font-weight: 800;
-    color: #f403fc;
-
 }
 
-.input-div {
+.inputDiv {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
-.input-div input {
-    padding: .5rem 1rem;
-    height: 50px;
+.input {
+    padding: 0.5rem 1rem;
     outline: none;
     border: none;
-    background-color: #fff;
-    width: 450px;
-    font-size: 1.5rem;
-    margin: .25rem;
+    height: 50px;
     border-radius: 25px;
+    width: 350px;
+    margin: 0.25rem;
+    transition: .5s;
+    font-size: 1.15rem;
 }
 
-.addButton {
-    height: 50px;
-    width: 50px;
-    border-radius: 25%;
+.add {
     outline: none;
     border: none;
-    background-color: #f403fc;
-    color: #fff;
-    margin: .25px;
+    height: 50px;
+    border-radius: 25px;
+    width: 50px;
+    background-color: #a903fc;
+    color: white;
     cursor: pointer;
+    transition: .5s;
+    margin: 0.25rem;
 }
 
-.addButton:hover {
-    opacity: .7;
+.add:hover {
+    opacity: 0.7;
 }
 
 .container {
@@ -65,39 +66,41 @@ h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
 }
 
 .item {
-    padding: .5rem;
-    margin-bottom: 1.5rem;
+    padding: 0.5rem;
     border-bottom: 4px solid #fff;
+    margin-bottom: 1.5rem;
 }
 
-.item-input {
+.item_input {
     background: none;
     outline: none;
-    counter-reset: #fff;
     border: none;
-    width: 350px;
+    color: #fff;
     font-size: 1.4rem;
+    width: 245px;
 }
 
-.editButton {
-    font-size: 1.2rem;
-    margin: 0 0.5rem;
+.edit {
     background: none;
     outline: none;
-    color: #f403fc;
     border: none;
+    color: #27d91a;
+    font-size: 1.4rem;
+    font-family: 'Hind', sans-serif;
+    margin: 0 0.5rem;
     cursor: pointer;
 }
 
-.removeButton {
-    font-size: 1.2rem;
+.remove {
     background: none;
     outline: none;
-    color: #fc0328;
     border: none;
+    color: #fc0328;
+    font-size: 1.4rem;
+    font-family: 'Hind', sans-serif;
     cursor: pointer;
 }
