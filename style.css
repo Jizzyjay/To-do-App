@@ -1,72 +1,103 @@
-body {
-    background-color: rgba(0, 0, 0, 0.1);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: 'Hina Mincho', serif;
 }
 
-header {
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    padding: 15px;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    background: #25b99a;
-    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+body {
+    height: 100%;
+    background-color: #111;
 }
 
-header input {
-    width: 100%;
-    height: 50px;
-    float: left;
+h1 {
+    font-size: 3rem;
+    font-size: 100;
+    margin: 1rem 0 3rem;
+    text-align: center;
     color: #fff;
-    font-size: 15px;
-    font-weight: 400;
-    text-indent: 18px;
-    padding: 0 60px 0 0;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px 25px 25px 5px;
-    border: 0px;
-    box-shadow: none;
-    outline: none;
-
-    -webkit-appearance: none;
-    -moz-appearance: none;
 }
 
-header input::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.75);
+.todo {
+    font-weight: 800;
+    color: #f403fc;
+
 }
 
-header input:-moz-input-placeholder {
-    color: rgba(255, 255, 255, 0.75);
+.input-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-header input::-moz-input-placeholder {
-    color: rgba(255, 255, 255, 0.75);
-}
-
-header input:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.75);
-}
-
-header button {
-    width: 50px;
+.input-div input {
+    padding: .5rem 1rem;
     height: 50px;
-    position:absolute;
-    top:15px;
-    right:15px;
-    z-index:2;
-
-    border-radius: 25px;
-    background: #fff;
-    border: 0px;
-    box-shadow: none;
     outline: none;
-    cursor: pointer;
+    border: none;
+    background-color: #fff;
+    width: 450px;
+    font-size: 1.5rem;
+    margin: .25rem;
+    border-radius: 25px;
+}
 
-    -webkit-appearance: none;
-    -moz-appearance: none;
+.addButton {
+    height: 50px;
+    width: 50px;
+    border-radius: 25%;
+    outline: none;
+    border: none;
+    background-color: #f403fc;
+    color: #fff;
+    margin: .25px;
+    cursor: pointer;
+}
+
+.addButton:hover {
+    opacity: .7;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.item {
+    padding: .5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 4px solid #fff;
+}
+
+.item-input {
+    background: none;
+    outline: none;
+    counter-reset: #fff;
+    border: none;
+    width: 350px;
+    font-size: 1.4rem;
+}
+
+.editButton {
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+    background: none;
+    outline: none;
+    color: #f403fc;
+    border: none;
+    cursor: pointer;
+}
+
+.removeButton {
+    font-size: 1.2rem;
+    background: none;
+    outline: none;
+    color: #fc0328;
+    border: none;
+    cursor: pointer;
 }

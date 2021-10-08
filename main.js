@@ -1,33 +1,46 @@
-const clear = document.querySelector(".clear");
-const dateElement = document.getElementById("date");
-const list = document.getElementById("list");
-const input = document.getElementById("input");
+const addButton = document.querySelector(".addButton");
+var inputValue = document.querySelector(".input");
+const container = document.getElementById("container");
 
-const CHECK = "fa-check-circle";
-const UNCHECk = "fa-circle-thin";
-const LINE_THROUGH = "lineThrough";
+class item {
+    construtor(itemName){
+        //create the item div
+        this.createDiv(itemName);
+    }
 
-const options = {weekday : "long", month:"short", day:"numeric"};
+    createDiv (itemName){
+        let input = document.creatElement('input');
+        input.value = itemName;
+        input.disabled = true;
+        input.classList.add('item-input');
+        input.type = "text";
 
-const today = new Date();
+        let itemBox = document.createElement('div');
+        itemBox.classList.add('item');
 
-dateElement.innerHTML = today.toDateString("en-US", options)
+        let editButton = document.createElement('button');
+        editButton.innerHTML = 'Edit';
+        editButton.classList.add('editButton');
 
+        let removeButton = document.createElement('button');
+        removeButton.innerHTML = 'Remove';
+        removeButton.classList.add('removeButton');
 
+        itemBox.appendChild(itemBox);
 
+        itemBox.appendChild(input);
+        itemBox.appendChild(editButton);
+        itemBox.appendChild(removeButton);
 
+        editButton.addEventListener('click', () => this.edit(input));
 
+        removeButton.addEventListener('click', () => this.remove(itemBox));
+    }
 
+    edit(input){
+    input.disabled =!input.disabled;
+}
 
-
-
-
-
-
-
-
-const list = document.getElementById("list")
-
-const text = <li class="item">
-    <i class="co fa fa-circle-thin" job="complete"></i>
-</li>
+remove(item){
+    container.removeChild(item);
+}
